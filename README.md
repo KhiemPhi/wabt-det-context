@@ -9,3 +9,29 @@ To run the codebase, you can install a Conda environment with the following comm
 ```shell
 conda env create -f environment.yml
 ```
+
+## Code Structure
+
+
+## Datasets
+
+Located in the dataset folder are the .csv files containg the YouTube comments and their Whataboutism Annotations.
+
+You can collect more data for further testing by using the following command:
+
+```shell
+python -u dataset/collect.py --api_key [your Youtube API key] --topic [the topic of videos you want collected] --save_as [file path to save your .csv results]
+```
+
+More instructions on how to set up a YouTube API-V3 API key can be found in this following tutorial https://www.youtube.com/watch?v=th5_9woFJmk
+
+
+## Training and Evaluation
+
+For quick evaluation, you can run the following command: 
+
+```shell
+bash experiment.sh
+```
+
+This will allow you to view all test results in different text-files for the various F1-scores. The train.py script both trains the model and evaulate the model on the test set each epoch. It automaticall registers the epoch with the best F1 results with the help of the PyTorch-Lightning wrappers.  
