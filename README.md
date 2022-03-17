@@ -6,6 +6,6 @@
 
 To run the codebase, you can install a Conda environment with the following command:
 
-'''shell
+```shell
 conda env create -f environment.yml
-'''
+```
